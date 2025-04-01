@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import SingleQuestion from "../Question/SingleQuestion";
 import { useAppDispatch } from "../../store/hooks";
 import { setCorrectAnswers } from "../../store/gameSlice";
-import { ColorRing } from "react-loader-spinner";
 import "./Category.scss";
 
 type Question = {
@@ -152,13 +151,7 @@ const Category = () => {
   if (answers.length === 0 && !questions.length) {
     return (
       <div className="loading-ring">
-        <ColorRing
-          visible={true}
-          height={100}
-          width={100}
-          ariaLabel="color-ring-loading"
-          colors={["#e15b64", "#f47e60", "#f8b26a", "#abbd81", "#849b87"]}
-        />
+       Loading...
       </div>
     );
   }

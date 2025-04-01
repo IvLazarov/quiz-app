@@ -4,7 +4,6 @@ import Category from "../Category/Category";
 import "./Categories.scss";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { setCategoriesPicked } from "../../store/gameSlice";
-import { ColorRing } from "react-loader-spinner";
 
 type Category = {
   id: number;
@@ -40,13 +39,7 @@ const Categories = () => {
 
       {categories.length === 0 ? (
         <div className="loading-ring">
-          <ColorRing
-            visible={true}
-            height={100}
-            width={100}
-            ariaLabel="color-ring-loading"
-            colors={["#e15b64", "#f47e60", "#f8b26a", "#abbd81", "#849b87"]}
-          />
+         Loading...
         </div>
       ) : (
         <div className="categories">
