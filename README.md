@@ -1,3 +1,9 @@
+# General Info
+
+A multiple-choice quiz app made with the OpenTDB API: [text](https://opentdb.com/api_config.php).
+
+You can try it here: [text](https://quiz-mulchoice.netlify.app/)
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
