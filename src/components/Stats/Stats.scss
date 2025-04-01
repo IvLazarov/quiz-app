@@ -1,0 +1,59 @@
+@use "../SASS/variables" as *;
+
+.player-stats-style {
+  width: 100%;
+  height: 100vh;
+  background-color: $bg-color;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  h1 {
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  p {
+    padding: 5px;
+    width: 80%;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .stat-links {
+    height: 100px;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    a {
+      border: 2px solid $black;
+      border-radius: 5px;
+      padding: 5px;
+      width: 150px;
+      height: 40px;
+      font-size: 20px;
+      color: $black;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: $black;
+        color: $white;
+      }
+    }
+  }
+}
