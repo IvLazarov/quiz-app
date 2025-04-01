@@ -57,7 +57,7 @@ const Categories = () => {
                 <Link
                   className="category-link-style"
                   key={category.id}
-                  to={`http://${window.location.host}/categories/${category.name}`}
+                  to={`/categories/${category.name}`}
                   onClick={() => dispatch(setCategoriesPicked(category.name))}
                 >
                   <p>{category.name}</p>
