@@ -38,7 +38,7 @@ const Categories = () => {
       </div>
 
       {categories.length === 0 ? (
-        <div className="loading-ring">
+        <div className="loading">
          Loading...
         </div>
       ) : (

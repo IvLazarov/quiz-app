@@ -150,7 +150,7 @@ const Category = () => {
 
   if (answers.length === 0 && !questions.length) {
     return (
-      <div className="loading-ring">
+      <div className="loading">
        Loading...
       </div>
     );
