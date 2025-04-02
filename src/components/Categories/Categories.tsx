@@ -38,9 +38,7 @@ const Categories = () => {
       </div>
 
       {categories.length === 0 ? (
-        <div className="loading">
-         Loading...
-        </div>
+        <div className="loading">Loading...</div>
       ) : (
         <div className="categories">
           {categories.map((category) => {
@@ -62,7 +60,11 @@ const Categories = () => {
                 >
                   <p>{category.name}</p>
 
-                  <img src={`/images/${category.id}.png`} alt={category.name} />
+                  <img
+                    src={`/images/${category.id}.png`}
+                    alt={category.name}
+                    loading="lazy"
+                  />
                 </Link>
               );
             }

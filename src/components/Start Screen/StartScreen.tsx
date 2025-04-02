@@ -9,7 +9,7 @@ const StartScreen = () => {
 
   return (
     <div className="start-screen-container">
-      <img src="/images/quiz.png" alt="quiz-app" />
+      <img src="/images/quiz.png" alt="quiz-app" loading="lazy" />
 
       {playerName.length === 0 ? (
         <div>
