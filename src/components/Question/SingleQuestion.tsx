@@ -35,17 +35,17 @@ const SingleQuestion = ({
 
   return (
     <div className="question-style">
-      <h2>
+      <h3>
         {`${questionNumber + 1}. `}
         {question
           .replace(/&quot;/g, `'`)
-          .replace(/&#039;/, `'`)
+          .replace(/&#039;s/, `'s`)
           .replace(/&amp;/, "&")
-          .replace(/&Uuml;/, "ü")}
-      </h2>
+          .replace(/&Uuml;/, "ü")
+          .replace(/&shy;/, "-")}
+      </h3>
       <div className="answers">
         <button
-          className="btn-style"
           disabled={disableAnswers}
           value={correctAnswer}
           onClick={(e) => {
@@ -68,7 +68,6 @@ const SingleQuestion = ({
         {incorrectAnswers.map((incAns, val) => {
           return (
             <button
-              className="btn-style"
               disabled={disableAnswers}
               value={incAns}
               onClick={(e) => {
@@ -92,5 +91,3 @@ const SingleQuestion = ({
 };
 
 export default SingleQuestion;
-
-
