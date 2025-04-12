@@ -169,7 +169,7 @@ const Category = () => {
                       <div key={id}>
                         <p>
                           The correct answer to question{" "}
-                          {questions.indexOf(question) + 1} was{" "}
+                          {questions.indexOf(question) + 1} was:{" "}
                           {question.correct_answer}.
                         </p>
                         <p>You answered {answer}.</p>
@@ -182,9 +182,7 @@ const Category = () => {
           })}
 
         <br />
-        <Link className="btn-style" to={"/categories"}>
-          Pick a different category
-        </Link>
+        <Link to={"/categories"}>Pick a different category</Link>
       </div>
     );
   }
