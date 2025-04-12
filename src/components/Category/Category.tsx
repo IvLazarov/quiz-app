@@ -1,4 +1,4 @@
-import { useParams, Link, useNavigate } from "react-router";
+import { useParams, Link } from "react-router";
 import { useState, useEffect } from "react";
 import SingleQuestion from "../Question/SingleQuestion";
 import { useAppDispatch } from "../../store/hooks";
@@ -16,12 +16,10 @@ type Question = {
 
 const Category = () => {
   const categoryName = useParams().name;
-  const navigate = useNavigate();
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [disable, setDisable] = useState(true);
   const [showDetails, setShowDetails] = useState(false);
-  const [error, setError] = useState<string>("");
   const [answers, setAnswers] = useState<string[]>([]);
   const dispatch = useAppDispatch();
 
@@ -114,22 +112,15 @@ const Category = () => {
   });
 
   useEffect(() => {
-    try {
-      fetch(
-        `https://opentdb.com/api.php?amount=10&category=${id?.id}&difficulty=easy&type=multiple`
-      )
-        .then((response) => response.json())
-        .then((data) => {
-          setQuestions(data.results);
-        });
-    } catch (err) {
-      if (err) {
-        return setError((err as Error).message);
-      }
-    }
+    fetch(
+      `https://opentdb.com/api.php?amount=10&category=${id?.id}&difficulty=easy&type=multiple`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        setQuestions(data.results);
+      });
   }, [id?.id]);
 
-  console.log(error);
   questions.map((question) => {
     answers.map((answer) => {
       if (question.correct_answer === answer) {
@@ -157,7 +148,7 @@ const Category = () => {
           You answered {total.length} out of {answers.length} questions
           correctly!
         </h1>
-        <button className="btn-style" onClick={() => navigate(0)}>
+        <button className="btn-style" onClick={() => window.location.reload()}>
           Try Again
         </button>
         <button
