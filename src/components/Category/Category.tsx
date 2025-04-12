@@ -148,9 +148,6 @@ const Category = () => {
           You answered {total.length} out of {answers.length} questions
           correctly!
         </h1>
-        <button className="btn-style" onClick={() => window.location.reload()}>
-          Try Again
-        </button>
         <button
           className="btn-style"
           onClick={() => setShowDetails(!showDetails)}
