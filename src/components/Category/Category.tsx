@@ -157,37 +157,30 @@ const Category = () => {
         {showDetails === true && incAnswers.length === 0 && (
           <h1>You got `em all right!</h1>
         )}
-       
-        
+
         {showDetails === true &&
           incAnswers.length !== 0 &&
           questions.map((question, id) => {
             return (
-              <div  key={id} >
-                
+              <div key={id}>
                 {answers.map((answer, id) => {
                   if (question.incorrect_answers.includes(answer)) {
                     return (
-                      <div  key={id}>
+                      <div key={id}>
                         <p>
-                          {questions.indexOf(question) + 1}. {question.question}
+                          The correct answer to question{" "}
+                          {questions.indexOf(question) + 1} was{" "}
+                          {question.correct_answer}.
                         </p>
                         <p>You answered {answer}.</p>
-                        <p>
-                          The correct answer was {question.correct_answer}.
-                        </p>
                       </div>
                     );
                   }
                 })}
-               
               </div>
-              
             );
           })}
-      
-        
-        
+
         <br />
         <Link className="btn-style" to={"/categories"}>
           Pick a different category

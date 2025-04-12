@@ -47,11 +47,7 @@
   }
 }
 
-
-
-
 .results-style {
-  border: 1px solid red;
   height: 100vh;
   width: 100%;
   background-color: $bg-color;
@@ -61,9 +57,6 @@
   justify-content: center;
   align-items: center;
   gap: 5px;
-
-  
-  
 
   h1 {
     padding: 2px;
@@ -81,12 +74,9 @@
   }
 }
 
-
 p {
-  
   text-align: center;
   color: $muted-grey;
-  
 }
 
 .loading-2 {
@@ -107,6 +97,12 @@ p {
   }
 }
 
+@media (max-width: 475px) {
+  .results-style {
+    height: 1000px;
+  }
+}
+
 @media (max-width: 420px) {
   .card-wrapper {
     height: 600px;
@@ -115,22 +111,12 @@ p {
 }
 
 @media (max-width: 380px) {
-  .results-style {
-    height: 2000px;
-  }
-
   .card-wrapper {
     height: 650px;
     width: 300px;
   }
 
-  .details{
+  .details {
     width: 45%;
-  }
-}
-
-@media(max-width: 320px){
-  .results-style{
-    height: 2300px;
   }
 }
