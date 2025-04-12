@@ -20,6 +20,7 @@
       width: 40%;
       height: 40px;
       text-align: center;
+      color: $white;
     }
 
     .player-links {
@@ -46,9 +47,9 @@
   gap: 20px 10px;
 
   a {
-    border: 2px solid $black;
+    border: 2px solid 	$dark-grey;
     border-radius: 5px;
-    color: $black;
+    color: $muted-grey;
     height: 170px;
     width: 130px;
     transition: all 0.2s;
@@ -94,6 +95,7 @@
   align-items: center;
   font-size: 40px;
   background-color: $bg-color;
+  color: $muted-grey;
 }
 
 // Media Queries

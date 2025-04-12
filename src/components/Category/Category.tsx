@@ -138,8 +138,6 @@ const Category = () => {
     });
   });
 
-  console.log(total);
-
   answers.map((answer) => {
     questions.map((question) => {
       if (question.incorrect_answers.includes(answer)) {
@@ -149,11 +147,7 @@ const Category = () => {
   });
 
   if (answers.length === 0 && !questions.length) {
-    return (
-      <div className="loading-2 loading">
-       Loading...
-      </div>
-    );
+    return <div className="loading-2 loading">Loading...</div>;
   }
   if (answers.length === questions.length) {
     dispatch(setCorrectAnswers(total.length));
@@ -208,25 +202,26 @@ const Category = () => {
 
   return (
     <div className="category-style">
-      <h1>{categoryName}</h1>
-
-      {questions.map((question, id) => {
-        if (id === currentIndex) {
-          return (
-            <SingleQuestion
-              key={id}
-              question={question.question}
-              correctAnswer={question.correct_answer}
-              incorrectAnswers={question.incorrect_answers}
-              setDisable={setDisable}
-              disable={disable}
-              answers={answers}
-              setAnswers={setAnswers}
-              questionNumber={id}
-            />
-          );
-        }
-      })}
+      <div className="card-wrapper">
+        <h1>{categoryName}</h1>
+        {questions.map((question, id) => {
+          if (id === currentIndex) {
+            return (
+              <SingleQuestion
+                key={id}
+                question={question.question}
+                correctAnswer={question.correct_answer}
+                incorrectAnswers={question.incorrect_answers}
+                setDisable={setDisable}
+                disable={disable}
+                answers={answers}
+                setAnswers={setAnswers}
+                questionNumber={id}
+              />
+            );
+          }
+        })}
+      </div>
 
       {questions.length && (
         <button

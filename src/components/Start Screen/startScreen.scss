@@ -29,6 +29,7 @@
     h1,
     h2 {
       text-align: center;
+      color: $muted-grey;
     }
 
     input {
@@ -53,18 +54,21 @@
 }
 
 .link-style {
-  border: 2px solid $black;
+  border: 2px solid $blue1;
+  background-color: $blue1;
   border-radius: 5px;
-  color: $black;
+  color: $white;
   width: fit-content;
   height: fit-content;
   padding: 5px;
-  transition: 0.2s;
-
-  &:hover {
-    background-color: $black;
+  transition: all 0.2s ease-in-out;
+  
+  &:hover{
+    border: 2px solid $blue2;
+    background-color: $blue2;
     color: $white;
   }
+
 }
 
 // Media Queries
