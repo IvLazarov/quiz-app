@@ -47,7 +47,11 @@
   }
 }
 
+
+
+
 .results-style {
+  border: 1px solid red;
   height: 100vh;
   width: 100%;
   background-color: $bg-color;
@@ -56,7 +60,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
+
+  
+  
 
   h1 {
     padding: 2px;
@@ -74,9 +81,12 @@
   }
 }
 
-h4 {
+
+p {
+  
   text-align: center;
   color: $muted-grey;
+  
 }
 
 .loading-2 {
@@ -106,11 +116,21 @@ h4 {
 
 @media (max-width: 380px) {
   .results-style {
-    height: 1500px;
+    height: 2000px;
   }
 
   .card-wrapper {
     height: 650px;
     width: 300px;
+  }
+
+  .details{
+    width: 45%;
+  }
+}
+
+@media(max-width: 320px){
+  .results-style{
+    height: 2300px;
   }
 }
