@@ -190,7 +190,7 @@ const Category = () => {
   return (
     <div className="category-style">
       <div className="card-wrapper">
-        <h1>{categoryName}</h1>
+        <h2>{categoryName}</h2>
         {questions.map((question, id) => {
           if (id === currentIndex) {
             return (

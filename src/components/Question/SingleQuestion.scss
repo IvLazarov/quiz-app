@@ -16,17 +16,19 @@
   }
 
   .answers {
-    height: 300px;
+    height: 250px;
     width: 80%;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    justify-content: space-evenly;
+    //gap: 10px;
 
     button {
-      width: 40%;
-      font-size: 18px;
+      width: 43%;
+      height: 70px;
+      font-size: 17px;
       color: $black;
       background-color: $bg-color;
       border: 2px solid $black;
@@ -42,22 +44,36 @@
   }
 }
 
+
+//Media Queries
+
+@media(max-width: 455px){
+  .question-style{
+    .answers{
+      button{
+        width: 45%;
+      }
+    }
+  }
+  
+}
+
 @media (max-width: 440px) {
   .question-style {
     height: 450px;
-    .answers {
-      button {
-        width: 45%;
+  }
+}
+
+
+@media(max-width: 420px){
+  .question-style{
+    .answers{
+      width: 60%;
+      button{
+        width: fit-content;
+        height: fit-content;
       }
     }
   }
 }
 
-@media(max-width: 380px){
-  .answers{
-    button{
-      font-size: 15px;
-      width: 45%;
-    }
-  }
-}
