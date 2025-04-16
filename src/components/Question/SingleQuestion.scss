@@ -20,13 +20,12 @@
     width: 80%;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
 
     button {
-      width: 43%;
-      height: 70px;
+      width: 200px;
       font-size: 17px;
       color: $black;
       background-color: $bg-color;
@@ -67,12 +66,11 @@
 @media(max-width: 420px){
   .question-style{
     .answers{
-      width: 38%;
+      height: 350px;
       justify-content: center;
       gap: 5px;
       button{
-        width: fit-content;
-        height: fit-content;
+        font-size: 15px;
       }
     }
   }
