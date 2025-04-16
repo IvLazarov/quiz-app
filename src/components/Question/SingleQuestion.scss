@@ -23,7 +23,6 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    //gap: 10px;
 
     button {
       width: 43%;
@@ -68,7 +67,9 @@
 @media(max-width: 420px){
   .question-style{
     .answers{
-      width: 60%;
+      width: 38%;
+      justify-content: center;
+      gap: 5px;
       button{
         width: fit-content;
         height: fit-content;
