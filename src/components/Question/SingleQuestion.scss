@@ -65,10 +65,11 @@
 
 @media(max-width: 420px){
   .question-style{
+    height: 500px;
     .answers{
-      height: 350px;
+      height: 450px;
       justify-content: center;
-      gap: 5px;
+      gap: 10px;
       button{
         font-size: 15px;
       }
